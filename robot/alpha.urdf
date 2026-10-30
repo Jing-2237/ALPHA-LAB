@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot name="alpha">
+  <material name="body_blue"><color rgba="0.08 0.25 0.45 1"/></material>
+  <material name="rubber"><color rgba="0.12 0.12 0.14 1"/></material>
+  <link name="base_footprint"/>
+  <joint name="base_to_footprint" type="fixed">
+    <parent link="base_footprint"/><child link="base_link"/>
+    <origin xyz="0 0 0.08"/>
+  </joint>
+  <link name="base_link">
+    <visual><geometry><box size="0.28 0.24 0.06"/></geometry><material name="body_blue"/></visual>
+    <collision><geometry><box size="0.28 0.24 0.06"/></geometry></collision>
+    <inertial><mass value="2.5"/><inertia ixx="0.01275" ixy="0" ixz="0" iyy="0.0170833" iyz="0" izz="0.0283333"/></inertial>
+  </link>
+  <link name="left_wheel">
+    <visual><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.025"/></geometry><material name="rubber"/></visual>
+    <collision><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.025"/></geometry></collision>
+    <inertial><mass value="0.25"/><inertia ixx="0.00016927" ixy="0" ixz="0" iyy="0.0003125" iyz="0" izz="0.00016927"/></inertial>
+  </link>
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/><child link="left_wheel"/><origin xyz="0 0.15 -0.03"/><axis xyz="0 1 0"/>
+  </joint>
+  <link name="right_wheel">
+    <visual><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.025"/></geometry><material name="rubber"/></visual>
+    <collision><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.025"/></geometry></collision>
+    <inertial><mass value="0.25"/><inertia ixx="0.00016927" ixy="0" ixz="0" iyy="0.0003125" iyz="0" izz="0.00016927"/></inertial>
+  </link>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/><child link="right_wheel"/><origin xyz="0 -0.15 -0.03"/><axis xyz="0 1 0"/>
+  </joint>
+  <link name="rear_support">
+    <visual><geometry><sphere radius="0.025"/></geometry><material name="rubber"/></visual>
+    <collision><geometry><sphere radius="0.025"/></geometry></collision>
+    <inertial><mass value="0.05"/><inertia ixx="0.0000125" ixy="0" ixz="0" iyy="0.0000125" iyz="0" izz="0.0000125"/></inertial>
+  </link>
+  <joint name="rear_support_joint" type="fixed">
+    <parent link="base_link"/><child link="rear_support"/><origin xyz="-0.10 0 -0.055"/>
+  </joint>
+</robot>

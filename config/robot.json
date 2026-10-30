@@ -1,0 +1,15 @@
+{
+  "wheel_radius": 0.05,
+  "track_width": 0.30,
+  "max_linear_speed": 0.35,
+  "max_angular_speed": 1.8,
+  "max_wheel_speed": 20.0,
+  "motor_time_constant": 0.12,
+  "dt": 0.02,
+  "goal_tolerance": 0.05,
+  "command_timeout": 0.25,
+  "stop_distance": 0.25,
+  "pid_kp": 0.035,
+  "pid_ki": 0.06,
+  "pid_kd": 0.001
+}

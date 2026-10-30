@@ -1,0 +1,42 @@
+{
+  "status": "stopped",
+  "stop_reason": "obstacle",
+  "completed_waypoints": 0,
+  "total_waypoints": 4,
+  "final_error_m": 0.699276,
+  "elapsed_s": 2.02,
+  "config": {
+    "wheel_radius": 0.05,
+    "track_width": 0.3,
+    "max_linear_speed": 0.35,
+    "max_angular_speed": 1.8,
+    "max_wheel_speed": 20.0,
+    "motor_time_constant": 0.12,
+    "dt": 0.02,
+    "goal_tolerance": 0.05,
+    "command_timeout": 0.25,
+    "stop_distance": 0.25,
+    "pid_kp": 0.035,
+    "pid_ki": 0.06,
+    "pid_kd": 0.001
+  },
+  "waypoints": [
+    [
+      1.5,
+      0.0
+    ],
+    [
+      1.5,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "obstacle_at_s": 2.0
+}
