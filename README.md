@@ -1,6 +1,6 @@
 # ALPHA-LAB
 
-**差速移动机器人控制与仿真实验平台 · Differential-drive robotics lab**
+**ALPHA机器人控制实验平台 · Differential-drive robotics lab**
 
 [![Robot control CI](https://github.com/Jing-2237/ALPHA-LAB/actions/workflows/ci.yml/badge.svg)](https://github.com/Jing-2237/ALPHA-LAB/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)
